@@ -1,2 +1,28 @@
 @import "variables";
 @import "mixins";
+
+.excel__toolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: $header-height;
+    height: $toolbar-height;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+
+    .button {
+        @include button($color-active); 
+    }
+
+    .button_group_enter {
+        height: 100%;
+        width: 1px;
+        background-color: #838383;
+        margin: 0px 7px;
+    }
+}

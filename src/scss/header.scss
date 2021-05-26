@@ -11,8 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background-color: yellowgreen;
+    background-color: white;
 
     & .input {
         margin: 0;
@@ -26,7 +25,9 @@
         line-height: 32px;
         outline: none;
         transition: .5s;
-        color: black;
+        color: #cccccc;
+        border: 1px solid #cccccc;
+
 
         &:hover {
             transition: .5s;
@@ -36,7 +37,8 @@
         &:focus {
             transition: .5s;
             border-radius: 2px;
-            border: 1px solid #1a73e8;
+            border: 1px solid $color-active;
+            color: $color-active;
         }
     
         &::placeholder {
@@ -46,7 +48,7 @@
     }
 
     & .button {
-        @include button(red);
+        @include button($color-active);
     }
 
 }

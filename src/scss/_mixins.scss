@@ -5,17 +5,29 @@
     text-align: center;
     position: relative;
     display: inline-block;
+    transition: .5s;
+    border-radius: 3px;
 
     & i {
        font-size: 20px;
-       color: white; 
-    }
+       color: #838383; 
 
-    &:active, &.active {
+       &:active, &.active {
         color: $color;
+       }
+
+       &:hover {
+        transition: .5s;
+        cursor: pointer;
+        color: $color;
+       }
     }
 
     &:hover {
         cursor: pointer;
+        transition: .5s;
+        color: $color;
+        background-color: rgba(129, 129, 129, 0.075);
     }
+   
 }
