@@ -2,7 +2,7 @@ import {$} from '@core/dom';
 
 export class Excel {
     constructor(selector, options) {
-        this.$el = document.querySelector(selector);
+        this.$el = $(selector);
         this.components = options.components || [];
     }
 
@@ -22,6 +22,6 @@ export class Excel {
     }
 
     render() {
-        this.$el.append(this.getRoot().$el);
+        this.$el.append(this.getRoot());
     }
 }

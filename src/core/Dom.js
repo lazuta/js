@@ -21,7 +21,7 @@ class Dom {
     }
 
     append(node) {
-        if (node instanceof DOM) {
+        if (node instanceof Dom) {
             node = node.$el;
         }
 
