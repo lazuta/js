@@ -14,7 +14,10 @@
         "object-curly-spacing": "off",
         "eol-last": "off",
         "linebreak-style": "off",
-        "indent": "off"
+        "indent": "off",
+        "max-len": "off",
+        "operator-linebreak": "off",
+        "no-undef": "off"
     },
     "extends": ["eslint:recommended", "google"]
 }
