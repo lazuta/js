@@ -25,7 +25,7 @@ function createCell(value) {
     `;
 }
 
-export function createTable(row = 15) {
+export function createTable(row = 30) {
     const countCol = CODE.Z - CODE.A + CODE.Error;
     const rows = [];
     const cols = new Array(countCol)
