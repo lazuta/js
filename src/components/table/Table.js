@@ -12,13 +12,21 @@ export class Table extends ExcelComponent {
         });
     }
 
-    onClick() {}
+    onClick(event) {
+        console.log(event.target)
+    }
 
-    onMouseup() {}
+    onMouseup(event) {
+        console.log(event.target)
+    }
 
-    onMousedown() {}
+    onMousedown(event) {
+        console.log(event.target)
+    }
 
-    onMousemove() {}
+    onMousemove(event) {
+        console.log(event.target)
+    }
 
     toHTML() {
         return createTable();
