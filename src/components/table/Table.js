@@ -13,19 +13,19 @@ export class Table extends ExcelComponent {
     }
 
     onClick(event) {
-        console.log(event.target)
+        // console.log(event.target)
     }
 
     onMouseup(event) {
-        console.log(event.target)
+        // console.log(event.target)
     }
 
     onMousedown(event) {
-        console.log(event.target)
+        // console.log(event.target)
     }
 
     onMousemove(event) {
-        console.log(event.target)
+        // console.log(event.target)
     }
 
     toHTML() {
