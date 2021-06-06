@@ -5,9 +5,14 @@ const CODE = {
 }
 
 function createRow(content, num) {
+    const rezise = num ? '<div class="row-resize"></div>' : '';
+
     return `
         <div class="row">
-            <div class="row-info">${num ? num : ''}</div>
+            <div class="row-info">
+                ${num ? num : ''}
+                ${rezise}    
+            </div>
             <div class="row-data">${content}</div>
         </div>
     `;
@@ -15,7 +20,10 @@ function createRow(content, num) {
 
 function createCol(col) {
     return `
-        <div class="column">${col}</div>    
+        <div class="column">
+            ${col}
+            <div class="col-resize"></div>
+        </div>    
     `;
 }
 

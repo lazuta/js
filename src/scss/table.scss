@@ -25,6 +25,25 @@
         border: 1px solid $border-color;
         background-color: $table-bg-color;
         border-top: none;
+        position: relative;
+
+        .row-resize {
+            background-color: rgb(0, 131, 218);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            transition: .5s;
+            opacity: 0;
+
+            &:hover {
+                transition: .2s;
+                opacity: 1;
+                cursor: row-resize;
+                
+            }
+        }
     }
 
     .row-data {
@@ -41,6 +60,25 @@
         height: 100%;
         border-right: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
+        position: relative;
+
+        .col-resize {
+            position: absolute;
+            background-color: rgb(0, 131, 218);
+            bottom: 0;
+            top: 0;
+            right: 0;
+            width: 4px;
+            transition: .5s;
+            opacity: 0;
+
+            &:hover {
+                transition: .2s;
+                opacity: 1;
+                cursor: col-resize;
+                
+            }
+        }
     }
 
     .cell {
