@@ -41,6 +41,14 @@ class Dom {
 
         return this;
     }
+
+    closets(selector) {
+        return $(this.$el.closest(selector));
+    }
+
+    getCoords() {
+        return this.$el.getBoundingClientRect();
+    }
 }
 
 export function $(selector) {

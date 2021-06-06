@@ -1,6 +1,7 @@
 import {ExcelComponent} from '@core/ExcelComponent';
 import { createTable } from './table.template';
 
+import {$} from '@core/dom';
 
 export class Table extends ExcelComponent {
     static className = 'excel__table';
@@ -8,24 +9,29 @@ export class Table extends ExcelComponent {
     constructor($root) {
         super($root, {
             name: 'Table',
-            listeners: ['click', 'mousedown', 'mouseup', 'mousemove']
+            listeners: ['mousedown']
         });
     }
 
-    onClick(event) {
-        // console.log(event.target)
-    }
-
-    onMouseup(event) {
-        // console.log(event.target)
-    }
-
     onMousedown(event) {
-        // console.log(event.target)
-    }
+        if (event.target.dataset.resize) {
+            const $resize = $(event.target);
+            const $parent = $resize.closets('[data-type="resizable"]');
+            const coords = $parent.getCoords();
 
-    onMousemove(event) {
-        // console.log(event.target)
+            document.onmousemove = e => {
+                const delta = e.pageX - coords.right;
+                const value = coords.width + delta;
+
+                if (value > 50) {
+                    $parent.$el.style.width = value + 'px';
+                }
+            }
+
+            document.onmouseup = () => {
+                document.onmousemove = null;
+            }
+        }
     }
 
     toHTML() {
