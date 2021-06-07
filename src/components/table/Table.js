@@ -22,10 +22,10 @@ export class Table extends ExcelComponent {
             document.onmousemove = e => {
                 const delta = e.pageX - coords.right;
                 const value = coords.width + delta;
-
-                if (value > 50) {
-                    $parent.$el.style.width = value + 'px';
-                }
+                document.querySelectorAll(`[data-col="${$parent.data.col}"]`)
+                    .forEach(el => {
+                        el.style.width = value + 'px';
+                    });
             }
 
             document.onmouseup = () => {
