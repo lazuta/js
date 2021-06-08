@@ -19,11 +19,12 @@ export class Table extends ExcelComponent {
             const $parent = $resize.closets('[data-type="resizable"]');
             const coords = $parent.getCoords();
 
+            const cells = this.$root.findAll(`[data-col="${$parent.data.col}"]`);
+
             document.onmousemove = e => {
                 const delta = e.pageX - coords.right;
                 const value = coords.width + delta;
-                document.querySelectorAll(`[data-col="${$parent.data.col}"]`)
-                    .forEach(el => {
+                cells.forEach(el => {
                         el.style.width = value + 'px';
                     });
             }
