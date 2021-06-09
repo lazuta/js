@@ -8,7 +8,7 @@ function createRow(content, num) {
     const rezise = num ? '<div class="row-resize" data-resize="row"></div>' : '';
 
     return `
-        <div class="row">
+        <div class="row" data-type="resizable" data-row="${num}">
             <div class="row-info">
                 ${num ? num : ''}
                 ${rezise}    
