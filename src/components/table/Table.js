@@ -33,7 +33,7 @@ export class Table extends ExcelComponent {
                     const delta = e.pageY - coords.bottom;
                     const value = coords.height + delta;
                     rows.forEach(el => {
-                        el.style.height = value + 'px';
+                        el.css = value + 'px';
                     });
                 }
             }
